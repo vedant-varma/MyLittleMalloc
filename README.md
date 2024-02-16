@@ -22,7 +22,7 @@ Create an array of size 4096 called memory in order to hold values of type char
     Returns with an error message if pointer is empty, if the value was returned before or the pointer was called without malloc prior.
 
     Test Plan:
-    Our test plan includes 5 tests tht repeat 50 times each
+    Our test plan includes 5 tests that repeat 50 times each
 
     Test 1: Allocates a spot in the memory array, right after frees it. repeats 120 times.
     Test 2: Allocates 120 spots in memory. then frees the 120 spots.
