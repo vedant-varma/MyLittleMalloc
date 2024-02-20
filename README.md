@@ -9,21 +9,24 @@ mymalloc.c
 memtest.c
 memgrind.c
 
-**MY FREE**********
+**MY FREE**
+
 The myfree() function is responsible for deallocating memory that was previously allocated using mymalloc(). Here's a detailed explanation of what myfree() does:
 
-**Parameters******:
+**Parameters**:
+
 ptr: This is a pointer to the memory block that needs to be deallocated. It should be the same pointer returned by a previous call to mymalloc().
 Functionality:
 
-**Validation******: 
+**Validation:**
 The function first checks if the provided pointer ptr is NULL. If it is NULL, it indicates an invalid address, and an error message is printed.
 
-**Coalescing**:After marking the memory block as free, myfree() may perform coalescing. Coalescing is the process of merging adjacent free memory blocks to prevent fragmentation. It helps in optimizing memory usage.
+**Coalescing Function:**
+fter marking the memory block as free, myfree() may perform coalescing. Coalescing is the process of merging adjacent free memory blocks to prevent fragmentation. It helps in optimizing memory usage.
+
 **Error Handling**: If the provided pointer is not NULL but does not point to a valid allocated memory block (e.g., it points to an already freed block), an error message is printed to indicate the issue.
 
 **Coalescing:**
-
 The coalesce() function is called to merge adjacent free memory blocks. It helps in optimizing memory usage by combining contiguous free blocks into larger blocks, reducing fragmentation.
 coalesce() merges both the previous and next free blocks with the currently freed block, if available. It iterates over the memory blocks to find adjacent free blocks and merge them.
 Error Handling:
